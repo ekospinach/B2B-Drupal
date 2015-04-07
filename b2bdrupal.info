@@ -1,7 +1,6 @@
-name = B2B Drupal
+name = b2bdrupal
 description = A B2B website template for Drupal.
 core = 7.x
-base theme = bootstrap
 
 
 ;;;;;;;;;;;;;;;;;;;;;
@@ -28,6 +27,7 @@ regions[footer_third]   = 'footer third'
 ;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = css/style.css
+scripts[] = js/script.js
 
 
 ; For information on choosing the desired method, please read the Drupal
