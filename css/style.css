@@ -51,14 +51,14 @@ a:hover {
   float: left;
 }
 .main-page-landing a.read-more {
-  border: 1px solid #eee;
+  border: 1px solid #9b0506;
   padding: 10px;
   margin-top: 50px;
   font-size: 20px;
-  color: #eeeeee;
+  color: #9b0506;
   display: inline-block;
 }
 .main-page-landing a.read-more:hover {
-  color: #9b0506;
-  border-color: #9b0506;
+  color: #eeeeee;
+  border-color: #eeeeee;
 }
