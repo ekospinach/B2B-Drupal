@@ -1,3 +1,6 @@
+.float-left {
+  float: left;
+}
 a {
   color: #e50709;
 }
@@ -28,7 +31,6 @@ a:hover {
   text-transform: capitalize;
 }
 .main-page-landing .social-links {
-  height: 32px;
   margin-top: 30px;
   overflow: hidden;
 }
@@ -43,6 +45,10 @@ a:hover {
 .main-page-landing .social-links .link-wrapper {
   margin: 0 auto;
   width: 20%;
+}
+.main-page-landing .social-links .link-wrapper > div {
+  width: 33.3333333%;
+  float: left;
 }
 .main-page-landing a.read-more {
   border: 1px solid #eee;

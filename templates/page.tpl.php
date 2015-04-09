@@ -84,13 +84,13 @@
       <?php endif; ?>
       <div class="social-links">
         <div class="link-wrapper clearfix"> 
-          <div class="twitter col-sm-4">
+          <div class="twitter">
             <a href="http://twitter.com"><i class="fa fa-twitter"></i></a>
           </div>
-          <div class="facebook col-sm-4">
+          <div class="facebook">
             <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
           </div>
-          <div class="google col-sm-4">
+          <div class="google">
             <a href="http://plus.google.com"><i class="fa fa-google-plus"></i></a>
           </div>
         </div>
