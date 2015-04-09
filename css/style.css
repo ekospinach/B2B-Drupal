@@ -1,68 +1,58 @@
-/**
- * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
- * remove this comment and start adding your styles to this file.
- */
-
- a {
- 	color:#9b0506;
- }
+a {
+  color: #e50709;
+}
+a:hover {
+  color: #6a0304;
+  text-decoration: underline;
+}
 .main-page-landing {
-	width:100%;
-	min-height:720px;
-	background:url(../images/landing.jpg) 0 0 no-repeat;
-	background-size:cover;
-	text-align: center;
+  width: 100%;
+  background: url(../images/landing.jpg) 0 0 no-repeat;
+  background-size: cover;
+  text-align: center;
 }
 .main-page-landing a.logo {
-	display:block;
-	margin-top: 100px;
+  display: block;
+  margin-top: 100px;
 }
 .main-page-landing a.logo img {
-	max-width:100%;
+  max-width: 100%;
 }
-
 .main-page-landing .slogan {
-	height:38px;
-	font-size:26px;
-	text-align: center;
-	background-color:rgba(55,55,55,0.4);
-	color:#eee;
-	margin-top: 15px;
-	text-transform: capitalize;
+  height: 38px;
+  font-size: 26px;
+  text-align: center;
+  background-color: rgba(55, 55, 55, 0.4);
+  color: #eeeeee;
+  margin-top: 15px;
+  text-transform: capitalize;
 }
-
 .main-page-landing .social-links {
-	height:32px;
-	margin-top: 30px;	
-	overflow:hidden;
+  height: 32px;
+  margin-top: 30px;
+  overflow: hidden;
 }
-
 .main-page-landing .social-links a {
-	color:#eee;
-	font-size:32px;
-	line-height: 1;
-
+  color: #eeeeee;
+  font-size: 32px;
+  line-height: 1;
 }
-
 .main-page-landing .social-links a:hover {
-	color:#9b0506;
+  color: #9b0506;
 }
-
 .main-page-landing .social-links .link-wrapper {
-	margin: 0 auto;
-	width:20%;
+  margin: 0 auto;
+  width: 20%;
 }
-
 .main-page-landing a.read-more {
-	border:1px solid #eee;
-	padding:10px;
-	margin-top:50px;
-	font-size:20px;
-	color:#eee;
-	display:inline-block;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 20px;
+  color: #eeeeee;
+  display: inline-block;
 }
-
 .main-page-landing a.read-more:hover {
-	color:#9b0506;
-	border-color:#9b0506;
+  color: #9b0506;
+  border-color: #9b0506;
 }

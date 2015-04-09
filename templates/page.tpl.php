@@ -75,7 +75,7 @@
 ?>
 <div class="fluid-container wrapper">
   <?php if ($is_front): ?>
-    <section class="main-page-landing clearfix">
+    <section class="main-page-landing full-single-page clearfix">
       <a href="<?php print $base_path;?>" class="logo">
         <img src="<?php print $logo; ?>"/>
       </a>
