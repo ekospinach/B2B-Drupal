@@ -87,13 +87,13 @@
       <div class="social-links">
         <div class="link-wrapper clearfix"> 
           <div class="twitter">
-            <a href="http://twitter.com"><i class="fa fa-twitter"></i></a>
+            <a href="<?php print theme_get_setting('social-twitter') ;?>"><i class="fa fa-twitter"></i></a>
           </div>
           <div class="facebook">
-            <a href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="<?php print theme_get_setting('social-facebook') ;?>"><i class="fa fa-facebook"></i></a>
           </div>
           <div class="google">
-            <a href="http://plus.google.com"><i class="fa fa-google-plus"></i></a>
+            <a href="<?php print theme_get_setting('social-google') ;?>"><i class="fa fa-google-plus"></i></a>
           </div>
         </div>
       </div>
