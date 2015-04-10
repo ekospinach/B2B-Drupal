@@ -11,19 +11,19 @@ function b2bdrupal_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['social-twitter'] = array(
     '#type' => 'textfield',
     '#title' => t('Your twitter links'),
-    '#default_value' => "http://twitter.com",
+    '#default_value' => theme_get_setting('social-twitter'),
     '#description'   => t("enter your twitter link URL"),
   );
   $form['social-facebook'] = array(
     '#type' => 'textfield',
     '#title' => t('Your facebook links'),
-    '#default_value' => "http://facebook.com",
+    '#default_value' => theme_get_setting('social-facebook'),
     '#description'   => t("enter your facebook link URL"),
   );
   $form['social-google'] = array(
     '#type' => 'textfield',
     '#title' => t('Your Google Plus links'),
-    '#default_value' => "http://plus.google.com",
+    '#default_value' => theme_get_setting('social-google'),
     '#description'   => t("enter your Google Plus link URL"),
   );
 }
