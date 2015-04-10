@@ -13,6 +13,11 @@
 .inline-block {
   display: inline-block;
 }
+.reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 /* cyrillic-ext */
 @font-face {
   font-family: 'Open Sans';
@@ -82,6 +87,7 @@
   background: url(../images/landing.jpg) 0 0 no-repeat;
   background-size: cover;
   text-align: center;
+  height: 550px;
 }
 .main-page-landing a.logo {
   display: block;
@@ -130,4 +136,79 @@
 .main-page-landing a.read-more:hover {
   color: #eeeeee;
   border-color: #eeeeee;
+}
+#nav {
+  min-height: 1px;
+  color: #eeeeee;
+  background-color: #333333;
+}
+#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#nav a {
+  text-decoration: none;
+}
+#nav .site-name {
+  padding: 0;
+  font-size: 18px;
+  line-height: :26px;
+}
+#nav .site-name .site-name-container {
+  background-color: #6a0304;
+  width: 60%;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+#nav .nav-bar {
+  float: right;
+  font-size: 18px;
+}
+#nav .nav-bar > .menu {
+  height: 25px;
+}
+#nav .nav-bar > .menu li a.active {
+  color: inherit;
+}
+#nav .nav-bar > .menu > li {
+  float: left;
+  padding: 0 15px;
+}
+#nav .nav-bar > .menu > li:hover {
+  background-color: #555555;
+}
+#nav .nav-bar > .menu li.expanded {
+  position: relative;
+}
+#nav .nav-bar > .menu li.expanded .menu {
+  display: none;
+  position: absolute;
+  font-size: 14px;
+  width: 100%;
+  left: 0;
+  background-color: #666666;
+}
+#nav .nav-bar > .menu li.expanded .menu:hover {
+  background-color: #888888;
+}
+#nav .nav-bar > .menu li.expanded .menu > li {
+  border-top: #eeeeee 1px solid;
+  line-height: 1.5;
+  padding: 3px 0 3px 15px;
+}
+#nav .nav-bar > .menu li.expanded .menu > li:first-child {
+  border-top: none;
+}
+#nav .nav-bar > .menu li.expanded .menu > li:hover {
+  text-decoration: underline;
+}
+#nav .nav-bar > .menu li.expanded.over .menu {
+  display: block;
 }

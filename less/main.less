@@ -9,6 +9,7 @@
 	background:url(../images/landing.jpg) 0 0 no-repeat;
 	background-size:cover;
 	text-align: center;
+	height:550px;
 	a.logo {
 		display:block;
 		margin-top: 100px;
@@ -58,5 +59,77 @@
 	a.read-more:hover {
 		color:@high-contrast-color;
 		border-color:@high-contrast-color;
+	}
+}
+
+#nav {
+	ul {
+		.reset;
+	}
+	li {
+		.reset;
+	}
+	a {
+		text-decoration: none;
+	}
+	min-height: 1px;
+	color:@high-contrast-color;
+	background-color: @gray-dark;
+	.site-name {
+		padding:0;
+		font-size: @main-menu-font;
+		line-height: :26px;
+		.site-name-container {
+			background-color:darken(@base-color, 10%);
+			width:60%;
+			font-weight:bold;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+	.nav-bar {
+		float:right;
+		font-size:@main-menu-font;
+		>.menu {
+			height:25px;
+			li a.active {
+				color:inherit;
+			}
+			>li {
+				float:left;
+				padding:0 15px;
+				&:hover {
+					background-color:@gray;
+				}
+			}
+			li.expanded {
+				position: relative;;
+				.menu {
+					display:none;
+					position:absolute;
+					font-size:@base-font-size;
+					width:100%;
+					left:0;
+					background-color:lighten(@gray-dark, 20%);
+					&:hover {
+						background-color:lighten(@gray, 20%);
+					}
+					>li {
+						&:first-child {
+							border-top: none;
+						}
+						&:hover {
+							text-decoration: underline;
+						}
+						border-top: @high-contrast-color 1px solid;
+						line-height: 1.5;
+						padding:3px 0 3px 15px;
+					}
+				}
+			}
+			li.expanded.over .menu {
+				display:block;
+			}
+		}
 	}
 }
