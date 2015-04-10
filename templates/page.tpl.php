@@ -77,7 +77,9 @@
   <?php if ($is_front): ?>
     <section class="main-page-landing full-single-page clearfix">
       <a href="<?php print $base_path;?>" class="logo">
-        <img src="<?php print $logo; ?>"/>
+        <?php if ($logo): ?>
+          <img src="<?php print $logo; ?>"/>
+        <?php endif; ?>
       </a>
       <?php if ($site_slogan): ?>
         <div class="slogan"><?php print $site_slogan; ?></div>
@@ -98,6 +100,18 @@
         <a href="#nav" class="read-more btn btn-outline-inverse btn-lg"><?php print t("Read More") ;?></a> 
     </section>
   <?php endif;?>
+    <header id="nav" class="header nav menu clearfix">
+      <div class="site-name col-sm-4">
+        <?php if ($site_name): ?>
+          <?php print $site_name; ?>
+        <?php endif; ?>
+      </div>
+      <div class="navbar col-sm-8">
+        <?php if ($main_menu_tree): ?>
+          <?php print drupal_render($main_menu_tree); ?>
+        <?php endif; ?>
+      </div>
+    </header>
 
 
 </div>

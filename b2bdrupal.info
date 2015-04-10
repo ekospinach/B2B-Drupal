@@ -26,5 +26,6 @@ regions[footer_third]   = 'footer third'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
+stylesheets[all][] = css/bootstrap.min.css
 stylesheets[all][] = css/style.css
 scripts[] = js/script.js
