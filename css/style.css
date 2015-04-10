@@ -154,6 +154,7 @@
 }
 #nav a {
   text-decoration: none;
+  color: #eeeeee;
 }
 #nav .site-name {
   padding: 0;
@@ -195,6 +196,7 @@
   position: absolute;
   font-size: 14px;
   width: 100%;
+  z-index: 101;
   left: 0;
   background-color: #666666;
 }

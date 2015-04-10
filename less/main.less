@@ -71,6 +71,7 @@
 	}
 	a {
 		text-decoration: none;
+		color:@high-contrast-color;
 	}
 	min-height: 1px;
 	color:@high-contrast-color;
@@ -112,6 +113,7 @@
 					position:absolute;
 					font-size:@base-font-size;
 					width:100%;
+					z-index:@initial-z-index+1;
 					left:0;
 					background-color:lighten(@gray-dark, 20%);
 					&:hover {

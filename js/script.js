@@ -17,10 +17,10 @@
 	Drupal.behaviors.mainMenu={
 		attach:function(context,settings){
 			var menu=$('.nav-bar li.expanded');
-			menu.mouseenter(function(){
+			menu.mouseover(function(){
 				$(this).addClass('over');
 			});
-			menu.mouseleave(function(){
+			menu.mouseout(function(){
 				$(this).removeClass('over');
 			});
 		}

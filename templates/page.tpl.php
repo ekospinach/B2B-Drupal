@@ -116,8 +116,29 @@
         </div>
       </nav>
     </header>
-
-    <?php print render($fist_sidebar) ?>
-
-
+    <section class="container">
+        <?php if ($page['sidebar_first']||$page['sidebar_second']) {
+          $page_column_number=3;
+        } else {
+          $page_column_number=0;
+        } ?>
+        <?php if ($page['sidebar_first']): ?>
+          <aside role="complementary" class="col-md-<?php print $page_column_number;?> left-sidebar">
+            <?php print render($page['sidebar_first']); ?>
+            <?php print render($page['sidebar_second']); ?>
+          </aside>
+        <?php endif ;?>
+        <section class="content content-wrapper col-md-<?php print 12-$page_column_number;?>">
+          <?php if ($messages): ?>
+            <div class="alert alert-warning" role="alert">
+              <?php print render($messages); ?>
+            </div>
+          <?php endif; ?>
+          <?php if(!$is_front) : ?>
+              <?php print render($breadcrumb); ?>
+          <?php endif; ?>
+          <?php print render($page['hightlighted']); ?>
+          <?php print render($page['content']); ?>
+        </section>
+      </section>
 </div>
