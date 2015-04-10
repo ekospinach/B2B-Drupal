@@ -115,5 +115,7 @@
       </div>
     </header>
 
+    <?php print render($fist_sidebar) ?>
+
 
 </div>
