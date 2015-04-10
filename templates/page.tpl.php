@@ -108,11 +108,13 @@
           <?php endif; ?>
         </div>
       </div>
-      <div class="nav-bar col-sm-8">
-        <?php if ($main_menu_tree): ?>
-          <?php print drupal_render($main_menu_tree); ?>
-        <?php endif; ?>
-      </div>
+      <nav class="nav-bar col-sm-8 clearfix">
+        <div class="main-menu">
+          <?php if ($main_menu_tree): ?>
+            <?php print drupal_render($main_menu_tree); ?>
+          <?php endif; ?>
+        </div>
+      </nav>
     </header>
 
     <?php print render($fist_sidebar) ?>

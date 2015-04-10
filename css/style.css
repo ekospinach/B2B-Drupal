@@ -171,23 +171,26 @@
   float: right;
   font-size: 18px;
 }
-#nav .nav-bar > .menu {
+#nav .nav-bar .main-menu {
+  float: right;
+}
+#nav .nav-bar .main-menu > .menu {
   height: 25px;
 }
-#nav .nav-bar > .menu li a.active {
+#nav .nav-bar .main-menu > .menu li a.active {
   color: inherit;
 }
-#nav .nav-bar > .menu > li {
+#nav .nav-bar .main-menu > .menu > li {
   float: left;
   padding: 0 15px;
 }
-#nav .nav-bar > .menu > li:hover {
+#nav .nav-bar .main-menu > .menu > li:hover {
   background-color: #555555;
 }
-#nav .nav-bar > .menu li.expanded {
+#nav .nav-bar .main-menu > .menu li.expanded {
   position: relative;
 }
-#nav .nav-bar > .menu li.expanded .menu {
+#nav .nav-bar .main-menu > .menu li.expanded .menu {
   display: none;
   position: absolute;
   font-size: 14px;
@@ -195,20 +198,20 @@
   left: 0;
   background-color: #666666;
 }
-#nav .nav-bar > .menu li.expanded .menu:hover {
+#nav .nav-bar .main-menu > .menu li.expanded .menu:hover {
   background-color: #888888;
 }
-#nav .nav-bar > .menu li.expanded .menu > li {
+#nav .nav-bar .main-menu > .menu li.expanded .menu > li {
   border-top: #eeeeee 1px solid;
   line-height: 1.5;
   padding: 3px 0 3px 15px;
 }
-#nav .nav-bar > .menu li.expanded .menu > li:first-child {
+#nav .nav-bar .main-menu > .menu li.expanded .menu > li:first-child {
   border-top: none;
 }
-#nav .nav-bar > .menu li.expanded .menu > li:hover {
+#nav .nav-bar .main-menu > .menu li.expanded .menu > li:hover {
   text-decoration: underline;
 }
-#nav .nav-bar > .menu li.expanded.over .menu {
+#nav .nav-bar .main-menu > .menu li.expanded.over .menu {
   display: block;
 }
