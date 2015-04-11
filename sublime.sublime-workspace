@@ -4,8 +4,28 @@
 		"selected_items":
 		[
 			[
+				"page",
+				"page_column_number"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"side",
+				"sidebar_first"
+			],
+			[
+				"float",
+				"float-left"
+			],
+			[
+				"set",
+				"setHeight"
+			],
+			[
 				"text",
-				"text-transform"
+				"text-decoration"
 			],
 			[
 				"mar",
@@ -60,10 +80,58 @@
 			}
 		},
 		{
-			"contents": "@base-color:",
+			"file": "less/main.less",
 			"settings":
 			{
-				"buffer_size": 12,
+				"buffer_size": 2405,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "less/variables.less",
+			"settings":
+			{
+				"buffer_size": 555,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/page.tpl.php",
+			"settings":
+			{
+				"buffer_size": 5991,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "template.php",
+			"settings":
+			{
+				"buffer_size": 585,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "b2bdrupal.info",
+			"settings":
+			{
+				"buffer_size": 793,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 18,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/script.js",
+			"settings":
+			{
+				"buffer_size": 574,
 				"line_ending": "Windows"
 			}
 		},
@@ -99,10 +167,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 567.0,
-		"last_filter": "less",
+		"height": 311.0,
+		"last_filter": "java",
 		"selected_items":
 		[
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"less",
 				"Set Syntax: LESS"
@@ -114,10 +186,6 @@
 			[
 				"PHP Code Sniffer: ",
 				"PHP Code Sniffer: Sniff this file"
-			],
-			[
-				"java",
-				"Set Syntax: JavaScript"
 			],
 			[
 				"instal",
@@ -132,7 +200,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 600.0
+		"width": 624.0
 	},
 	"console":
 	{
@@ -154,7 +222,10 @@
 	"expanded_folders":
 	[
 		"/D/Code/drupal/sites/all/themes/B2BDrupal",
-		"/D/Code/drupal/sites/all/themes/B2BDrupal/less"
+		"/D/Code/drupal/sites/all/themes/B2BDrupal/css",
+		"/D/Code/drupal/sites/all/themes/B2BDrupal/js",
+		"/D/Code/drupal/sites/all/themes/B2BDrupal/less",
+		"/D/Code/drupal/sites/all/themes/B2BDrupal/templates"
 	],
 	"file_history":
 	[
@@ -257,7 +328,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -287,23 +358,52 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "less/main.less",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12,
+						"buffer_size": 2405,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12,
-								12
+								1969,
+								1969
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1782.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "less/variables.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 555,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								555,
+								555
 							]
 						],
 						"settings":
@@ -314,11 +414,153 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "templates/page.tpl.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5991,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5814,
+								5814
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2420.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 4,
+					"file": "template.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								580,
+								580
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "b2bdrupal.info",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 793,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/script.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								505,
+								505
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "Gruntfile.js",
 					"semi_transient": false,
 					"settings":
@@ -330,19 +572,19 @@
 						"selection":
 						[
 							[
-								593,
-								641
+								566,
+								566
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
-						"translation.x": -0.0,
-						"translation.y": 132.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]

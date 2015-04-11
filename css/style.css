@@ -18,6 +18,12 @@
   padding: 0;
   list-style: none;
 }
+.max-image {
+  max-width: 100%;
+}
+.border-radius {
+  border-radius: 5px;
+}
 /* cyrillic-ext */
 @font-face {
   font-family: 'Open Sans';
@@ -136,6 +142,60 @@
 .main-page-landing a.read-more:hover {
   color: #eeeeee;
   border-color: #eeeeee;
+}
+.header > a {
+  padding: 10px;
+}
+.header > a img {
+  max-width: 100%;
+}
+.header .search-form {
+  display: table;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.header .search-form > div {
+  display: table-row;
+}
+.header .search-form > div .container-inline {
+  display: table-cell;
+}
+.header .search-form .container-inline div {
+  display: inline-block;
+}
+.header .search-form .container-inline label {
+  display: none;
+}
+.header .search-form .container-inline .form-item-keys {
+  width: 75%;
+  position: relative;
+}
+.header .search-form .container-inline .form-item-keys:after {
+  content: "\f002";
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+.header .search-form .container-inline .form-item-keys input.form-text {
+  width: 100%;
+  border-color: #9b0506;
+  border-left-style: solid;
+  border-top-style: solid;
+}
+.header .search-form input.form-submit {
+  display: inline-block;
+  width: 20%;
+  border-radius: 5px;
+  border-color: #9b0506;
+  background-color: #9b0506;
+  color: #eeeeee;
+  border: 2px solid;
+  padding: 2px 6px;
+  font-size: 16px;
 }
 #nav {
   min-height: 1px;

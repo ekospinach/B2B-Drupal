@@ -99,8 +99,22 @@
       </div>
         <a href="#nav" class="read-more btn btn-outline-inverse btn-lg"><?php print t("Read More") ;?></a> 
     </section>
+  <?php else: ?>
+    <header class="header container">
+      <div class="logo col-md-4">
+        <a href="<?php print $front_page;?>">
+           <img src="<?php print $logo; ?>"/>
+        </a>
+      </div> 
+      <div class="search-box-header col-md-4">
+        <?php print render($search_box);?>
+      </div>
+      <div class="help-header col-md-4">
+        <?php print render($page['help']);?>
+      </div>
+    </header>
   <?php endif;?>
-    <header id="nav" class="header main-menu clearfix">
+    <header id="nav" class="main-menu clearfix">
       <div class="site-name col-sm-4">
         <div class="site-name-container">
           <?php if ($site_name): ?>
@@ -141,4 +155,26 @@
           <?php print render($page['content']); ?>
         </section>
       </section>
+      <footer class="footer">
+        <div class="foot container">
+          <?php $footer_column_count=(int) $page['footer_first']+(int) $page['footer_second']+(int) $page['footer_third'];
+            $footer_column_count==0?$footer_column_count=0:$footer_column_count=12/$footer_column_count;
+          ?>
+          <?php if ($page['footer_first']): ?>
+            <div class="col-sm-<?php print $footer_column_count ; ?>">
+              <?php print render($page['footer_first']); ?>
+            </div>
+          <?php endif ;?>
+          <?php if ($page['footer_second']): ?>
+            <div class="col-sm-<?php print $footer_column_count ; ?>">
+              <?php print render($page['footer_second']); ?>
+            </div>
+          <?php endif ;?>
+          <?php if ($page['footer_third']): ?>
+            <div class="col-sm-<?php print $footer_column_count ; ?>">
+              <?php print render($page['footer_third']); ?>
+            </div>
+          <?php endif ;?>
+        </div>
+      </footer>
 </div>
