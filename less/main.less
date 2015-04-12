@@ -1,6 +1,6 @@
 @import url("variables.less");
 @import url("mixin.less");
-@import url("mixin.less");
+@import url("reset.less");
 @import url("opensans.less");
 
 
@@ -94,8 +94,8 @@
 		  font: normal normal normal 14px/1 FontAwesome;
 		  font-size: inherit;
 		  position:absolute;
-		  left:5px;
-		  top:5px;
+		  right:5px;
+		  top:5px;	
 		  cursor:pointer
     	}
     	input.form-text {
@@ -107,7 +107,10 @@
     }
     .search-form input.form-submit {
     	.inline-block;
-    	width:20%;
+    	width:15%;
+    	left:-15%;
+    	position:relative;
+    	opacity: 0;
     	.border-radius;
     	border-color:@base-color;
     	background-color:@base-color;
@@ -118,6 +121,7 @@
     }
 } 
 #nav {
+	margin-bottom: 10px;
 	ul {
 		.reset;
 	}
@@ -191,5 +195,37 @@
 				display:block;
 			}
 		}
+	}
+}
+
+.left-sidebar .block {
+	padding:10px;
+	background: transparent;
+	margin-bottom: 10px;
+	h2 {
+		.reset;
+		padding:3px;
+		background-color:@gray-lighter;
+		.upper-border-radius(10px);
+	}
+	.content {
+		padding:5px;
+		background-color:#e7e7e7;
+		.bottom-border-radius(10px);
+	}
+}
+
+.content.content-wrapper {
+	padding-top:10px;
+}
+
+footer.footer {
+	background-color: @gray-dark;
+	.foot.container {
+		background-color: transparent;
+		color:@high-contrast-color;
+	}
+	a {
+		color:inherit;
 	}
 }

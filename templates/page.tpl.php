@@ -152,6 +152,11 @@
               <?php print render($breadcrumb); ?>
           <?php endif; ?>
           <?php print render($page['hightlighted']); ?>
+          <?php if ($title): ?>
+            <?php print render($title_prefix); ?>
+            <h1 class="content-title"><?php print $title;?></h1>
+            <?php print render($title_suffix); ?>
+          <?php endif ; ?>
           <?php print render($page['content']); ?>
         </section>
       </section>
