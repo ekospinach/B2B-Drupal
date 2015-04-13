@@ -136,13 +136,7 @@
         } else {
           $page_column_number=0;
         } ?>
-        <?php if ($page['sidebar_first']): ?>
-          <aside role="complementary" class="col-md-<?php print $page_column_number;?> left-sidebar">
-            <?php print render($page['sidebar_first']); ?>
-            <?php print render($page['sidebar_second']); ?>
-          </aside>
-        <?php endif ;?>
-        <section class="content content-wrapper col-md-<?php print 12-$page_column_number;?>">
+        <section class="content content-wrapper col-md-<?php print 12-$page_column_number;?> col-md-push-<?php print $page_column_number;?>">
           <?php if ($messages): ?>
             <div class="alert alert-warning" role="alert">
               <?php print render($messages); ?>
@@ -159,6 +153,12 @@
           <?php endif ; ?>
           <?php print render($page['content']); ?>
         </section>
+        <?php if ($page['sidebar_first']): ?>
+          <aside role="complementary" class="col-md-<?php print $page_column_number;?> col-md-pull-<?php print 12-$page_column_number;?> left-sidebar">
+            <?php print render($page['sidebar_first']); ?>
+            <?php print render($page['sidebar_second']); ?>
+          </aside>
+        <?php endif ;?>
       </section>
       <footer class="footer">
         <div class="foot container">
