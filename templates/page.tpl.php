@@ -74,6 +74,7 @@
  */
 ?>
 <div class="fluid-container wrapper">
+  <?php /*
   <?php if ($is_front): ?>
     <section class="main-page-landing full-single-page clearfix">
       <a href="<?php print $base_path;?>" class="logo">
@@ -100,37 +101,64 @@
         <a href="#nav" class="read-more btn btn-outline-inverse btn-lg"><?php print t("Read More") ;?></a> 
     </section>
   <?php else: ?>
+  */ ?>
     <header class="header container">
-      <div class="logo col-md-4">
+      <div class="logo col-md-4 col-xs-6">
         <a href="<?php print $front_page;?>">
-           <img src="<?php print $logo; ?>"/>
-        </a>
-      </div> 
-      <div class="search-box-header col-md-4">
-        <?php print render($search_box);?>
-      </div>
-      <div class="help-header col-md-4">
-        <?php print render($page['help']);?>
-      </div>
-    </header>
-  <?php endif;?>
-    <header id="nav" class="main-menu clearfix">
-      <div class="site-name col-sm-4">
-        <div class="site-name-container">
           <?php if ($site_name): ?>
             <?php print $site_name; ?>
           <?php endif; ?>
-        </div>
+        </a>
+      </div> 
+      <div class="search-box-header col-md-4 col-xs-12-pull">
+        <?php print render($search_box);?>
       </div>
-      <nav class="nav-bar col-sm-8 clearfix">
+      <div class="help-header col-md-4 col-xs-6">
+        <div class="social-links">
+          <div class="link-wrapper clearfix"> 
+            <div class="twitter">
+              <a href="<?php print theme_get_setting('social-twitter') ;?>"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="facebook">
+              <a href="<?php print theme_get_setting('social-facebook') ;?>"><i class="fa fa-facebook"></i></a>
+            </div>
+            <div class="google">
+              <a href="<?php print theme_get_setting('social-google') ;?>"><i class="fa fa-google-plus"></i></a>
+            </div>
+          </div>
+      </div>
+      </div>
+    </header>
+  <?php //endif;?>
+    <section id="nav" class="main-menu clearfix">
+      <nav class="nav-bar container clearfix">
         <div class="main-menu">
           <?php if ($main_menu_tree): ?>
             <?php print drupal_render($main_menu_tree); ?>
           <?php endif; ?>
         </div>
       </nav>
-    </header>
+    </section>
     <section class="container">
+        <div id='front-slider' class='swipe'>
+            <div class='swipe-wrap'>
+              <div>
+                <a href="<?php print $slideshow['first']['link'] ?>">
+                  <img style='max-width:100%' src="<?php print $slideshow['first']['src'] ;?>" />
+                </a>
+              </div>
+              <div>
+                <a href="<?php print $slideshow['second']['link'] ?>">
+                  <img style='max-width:100%' src="<?php print $slideshow['second']['src'] ;?>" />
+                </a>
+              </div>
+              <div>
+                <a href="<?php print $slideshow['third']['link'] ?>">
+                  <img style='max-width:100%' src="<?php print $slideshow['third']['src'] ;?>" />
+                </a>
+              </div>
+            </div>
+        </div>
         <?php if ($page['sidebar_first']||$page['sidebar_second']) {
           $page_column_number=3;
         } else {
@@ -142,6 +170,7 @@
               <?php print render($messages); ?>
             </div>
           <?php endif; ?>
+
           <?php if(!$is_front) : ?>
               <?php print render($breadcrumb); ?>
           <?php endif; ?>

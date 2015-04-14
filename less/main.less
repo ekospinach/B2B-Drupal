@@ -4,28 +4,7 @@
 @import url("opensans.less");
 
 
-.main-page-landing {
-	width:100%;
-	background:url(../images/landing.jpg) 0 0 no-repeat;
-	background-size:cover;
-	text-align: center;
-	height:550px;
-	a.logo {
-		display:block;
-		margin-top: 100px;
-	}
-	a.logo img {
-		max-width:100%;
-	}
-	.slogan {
-		height:38px;
-		font-size:26px;
-		text-align: center;
-		background-color:rgba(55,55,55,0.4);
-		color:@high-contrast-color;
-		margin-top: 15px;
-		text-transform: capitalize;
-	}
+.header {
 	.social-links {
 		margin-top: 30px;	
 		overflow:hidden;
@@ -46,19 +25,6 @@
 			width:33.3333333%;
 			.float-left;
 		}
-	}
-	a.read-more {
-		border:1px solid @base-color;
-		padding:10px;
-		margin-top:50px;
-		font-size:20px;
-		color:@base-color;
-		display:inline-block;
-	}
-
-	a.read-more:hover {
-		color:@high-contrast-color;
-		border-color:@high-contrast-color;
 	}
 }
 .header {
@@ -228,4 +194,19 @@ footer.footer {
 	a {
 		color:inherit;
 	}
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
 }
