@@ -4,28 +4,7 @@
 @import url("opensans.less");
 
 
-.main-page-landing {
-	width:100%;
-	background:url(../images/landing.jpg) 0 0 no-repeat;
-	background-size:cover;
-	text-align: center;
-	height:550px;
-	a.logo {
-		display:block;
-		margin-top: 100px;
-	}
-	a.logo img {
-		max-width:100%;
-	}
-	.slogan {
-		height:38px;
-		font-size:26px;
-		text-align: center;
-		background-color:rgba(55,55,55,0.4);
-		color:@high-contrast-color;
-		margin-top: 15px;
-		text-transform: capitalize;
-	}
+.header {
 	.social-links {
 		margin-top: 30px;	
 		overflow:hidden;
@@ -47,19 +26,6 @@
 			.float-left;
 		}
 	}
-	a.read-more {
-		border:1px solid @base-color;
-		padding:10px;
-		margin-top:50px;
-		font-size:20px;
-		color:@base-color;
-		display:inline-block;
-	}
-
-	a.read-more:hover {
-		color:@high-contrast-color;
-		border-color:@high-contrast-color;
-	}
 }
 .header {
     >a {
@@ -69,15 +35,7 @@
 		}
     }
     .search-form {
-    	display:table;
     	margin-bottom: 0;
-    	vertical-align: middle;
-    	>div {
-    		display: table-row;
-    		.container-inline {
-    			display:table-cell;
-    		}
-    	}
     }
     .search-form .container-inline div {
     	.inline-block;
@@ -86,7 +44,7 @@
     	display:none;
     }
     .search-form .container-inline .form-item-keys {
-    	width:75%;
+    	width:90%;
     	position: relative;
     	&:after {
     	  content: "\f002";
@@ -107,8 +65,8 @@
     }
     .search-form input.form-submit {
     	.inline-block;
-    	width:15%;
-    	left:-15%;
+    	width:8%;
+    	left:-8%;
     	position:relative;
     	opacity: 0;
     	.border-radius;
@@ -148,13 +106,9 @@
 		}
 	}
 	.nav-bar {
-		float:right;
 		font-size:@main-menu-font;
-		.main-menu {
-			float:right;
-		}
 		.main-menu>.menu {
-			height:25px;
+			height:28px;
 			li a.active {
 				color:inherit;
 			}
@@ -164,6 +118,9 @@
 				&:hover {
 					background-color:@gray;
 				}
+			}
+			>li.first {
+				margin-left:-15px;
 			}
 			li.expanded {
 				position: relative;;
@@ -228,4 +185,19 @@ footer.footer {
 	a {
 		color:inherit;
 	}
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
 }
