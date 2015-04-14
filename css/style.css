@@ -45,8 +45,10 @@ h5,
 h6 {
   text-transform: capitalize;
 }
-input {
-  width: 100%;
+@media (max-width: 768px) {
+  input[type="text"] {
+    width: 100%;
+  }
 }
 /* cyrillic-ext */
 @font-face {
@@ -139,15 +141,7 @@ input {
   max-width: 100%;
 }
 .header .search-form {
-  display: table;
   margin-bottom: 0;
-  vertical-align: middle;
-}
-.header .search-form > div {
-  display: table-row;
-}
-.header .search-form > div .container-inline {
-  display: table-cell;
 }
 .header .search-form .container-inline div {
   display: inline-block;
@@ -156,7 +150,7 @@ input {
   display: none;
 }
 .header .search-form .container-inline .form-item-keys {
-  width: 75%;
+  width: 90%;
   position: relative;
 }
 .header .search-form .container-inline .form-item-keys:after {
@@ -177,8 +171,8 @@ input {
 }
 .header .search-form input.form-submit {
   display: inline-block;
-  width: 15%;
-  left: -15%;
+  width: 8%;
+  left: -8%;
   position: relative;
   opacity: 0;
   border-radius: 5px;
@@ -211,7 +205,7 @@ input {
 }
 #nav .site-name {
   padding: 0;
-  font-size: 18px;
+  font-size: 20px;
   line-height: :26px;
 }
 #nav .site-name .site-name-container {
@@ -222,14 +216,10 @@ input {
   text-transform: uppercase;
 }
 #nav .nav-bar {
-  float: right;
-  font-size: 18px;
-}
-#nav .nav-bar .main-menu {
-  float: right;
+  font-size: 20px;
 }
 #nav .nav-bar .main-menu > .menu {
-  height: 25px;
+  height: 28px;
 }
 #nav .nav-bar .main-menu > .menu li a.active {
   color: inherit;
@@ -240,6 +230,9 @@ input {
 }
 #nav .nav-bar .main-menu > .menu > li:hover {
   background-color: #555555;
+}
+#nav .nav-bar .main-menu > .menu > li.first {
+  margin-left: -15px;
 }
 #nav .nav-bar .main-menu > .menu li.expanded {
   position: relative;

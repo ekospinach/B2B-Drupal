@@ -140,6 +140,7 @@
       </nav>
     </section>
     <section class="container">
+      <?php if ($is_front) : ?>
         <div id='front-slider' class='swipe'>
             <div class='swipe-wrap'>
               <div>
@@ -159,7 +160,8 @@
               </div>
             </div>
         </div>
-        <?php if ($page['sidebar_first']||$page['sidebar_second']) {
+      <?php endif; ?>
+      <?php if ($page['sidebar_first']||$page['sidebar_second']) {
           $page_column_number=3;
         } else {
           $page_column_number=0;
