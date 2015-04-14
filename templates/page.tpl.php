@@ -103,18 +103,20 @@
   <?php else: ?>
   */ ?>
     <header class="header container">
-      <div class="logo col-md-4 col-xs-6">
+      <div class="logo col-md-4">
         <a href="<?php print $front_page;?>">
+          <?php if ($logo): ?>
+            <img src="<?php print $logo; ?>"/>
+          <?php endif; ?>
           <?php if ($site_name): ?>
-            <?php print $site_name; ?>
+            <span class="site-name"><?php print $site_name; ?></span>
           <?php endif; ?>
         </a>
       </div> 
-      <div class="search-box-header col-md-4 col-xs-12-pull">
+      <div class="search-box-header col-md-4">
         <?php print render($search_box);?>
       </div>
-      <div class="help-header col-md-4 col-xs-6">
-        <div class="social-links">
+        <div class="social-links col-md-4">
           <div class="link-wrapper clearfix"> 
             <div class="twitter">
               <a href="<?php print theme_get_setting('social-twitter') ;?>"><i class="fa fa-twitter"></i></a>
@@ -126,7 +128,6 @@
               <a href="<?php print theme_get_setting('social-google') ;?>"><i class="fa fa-google-plus"></i></a>
             </div>
           </div>
-      </div>
       </div>
     </header>
   <?php //endif;?>
