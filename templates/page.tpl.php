@@ -140,8 +140,27 @@
         </div>
       </nav>
     </section>
+    <section id="mobile-nav" class="container clearfix">
+      <nav class="mobile-nav clearfix">
+        <div class="mobile-main-menu">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#" data-toggle="collapse" data-target=".navbar-main-collapse"><?php print t('Navigation');?></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-header">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+          </div>
+          <?php if ($main_menu_tree): ?>
+            <?php print render($main_menu_tree); ?>
+          <?php endif; ?>
+        </div>
+      </nav>
+    </section>
     <section class="container">
       <?php if ($is_front) : ?>
+        <div class="slideshow" style="position:relative">
         <div id='front-slider' class='swipe'>
             <div class='swipe-wrap'>
               <div>
@@ -160,6 +179,12 @@
                 </a>
               </div>
             </div>
+        </div>
+        <div class="slide-controller">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+        </div>
         </div>
       <?php endif; ?>
       <?php if ($page['sidebar_first']||$page['sidebar_second']) {

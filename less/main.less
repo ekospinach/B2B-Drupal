@@ -195,17 +195,68 @@ footer.footer {
 	}
 }
 
-.swipe {
-  overflow: hidden;
-  visibility: hidden;
-  position: relative;
+.slideshow {
+	.slide-controller {
+		position: absolute;
+		right:15px;
+		bottom:15px;
+		span {
+			.inline-block;
+			.square(25px);
+			border:2px solid @gray-lighter;
+			border-radius:50%;
+			color:lighten(@base-color,25%);
+			text-align: center;
+			cursor: pointer;
+		}
+	}
+	.swipe {
+	  	overflow: hidden;
+	  	visibility: hidden;
+	  	position: relative;
+	}
+	.swipe-wrap {
+	  	overflow: hidden;
+	  	position: relative;
+	}
+	.swipe-wrap > div {
+	  	float:left;
+	  	width:100%;
+	  	position: relative;
+	}
 }
-.swipe-wrap {
-  overflow: hidden;
-  position: relative;
+
+@media (min-width:@s-device) {
+	.mobile-nav {
+		display: none;
+	}
 }
-.swipe-wrap > div {
-  float:left;
-  width:100%;
-  position: relative;
+.mobile-nav .mobile-main-menu {
+	color:@high-contrast-color;
+	.navbar-header {
+		.navbar-brand {
+			color:inherit;
+		}
+		background-color: @nav-background;
+		.navbar-toggle .icon-bar {
+			background-color: @high-contrast-color;
+		}
+	}
+	.menu {
+		background-color: lighten(#333333, 10%);
+		.reset; 
+		>li {
+			a {
+				color:inherit;
+			}
+			.reset;
+			font-size: @base-font-size+4;
+		}
+		>li.expanded ul.menu {
+			padding-left:15px;
+			a {
+				font-size: @base-font-size+2;
+			}
+		}
+	}
 }

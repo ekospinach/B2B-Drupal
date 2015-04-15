@@ -25,6 +25,7 @@
 	Drupal.behaviors.swipeSlide={
 		attach:function(context,settings) {
 			var slide=document.getElementById('front-slider');
+			var controller=$('.slide-controller span');
 			if (slide) {
 				window.mySwipe = new Swipe(slide,{
 					  speed: 1500,
@@ -34,6 +35,11 @@
 					  stopPropagation: false,
 					}
 				);
+				controller.each(function(index){
+					$(this).click(function(){
+						window.mySwipe.slide(index);
+					});
+				});
 			}
 		}
 	}

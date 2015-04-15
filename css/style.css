@@ -308,17 +308,70 @@ footer.footer .foot.container {
 footer.footer a {
   color: inherit;
 }
-.swipe {
+.slideshow .slide-controller {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+.slideshow .slide-controller span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #eeeeee;
+  border-radius: 50%;
+  color: #f82729;
+  text-align: center;
+  cursor: pointer;
+}
+.slideshow .swipe {
   overflow: hidden;
   visibility: hidden;
   position: relative;
 }
-.swipe-wrap {
+.slideshow .swipe-wrap {
   overflow: hidden;
   position: relative;
 }
-.swipe-wrap > div {
+.slideshow .swipe-wrap > div {
   float: left;
   width: 100%;
   position: relative;
+}
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+.mobile-nav .mobile-main-menu {
+  color: #eeeeee;
+}
+.mobile-nav .mobile-main-menu .navbar-header {
+  background-color: #333333;
+}
+.mobile-nav .mobile-main-menu .navbar-header .navbar-brand {
+  color: inherit;
+}
+.mobile-nav .mobile-main-menu .navbar-header .navbar-toggle .icon-bar {
+  background-color: #eeeeee;
+}
+.mobile-nav .mobile-main-menu .menu {
+  background-color: #4d4d4d;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mobile-nav .mobile-main-menu .menu > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
+}
+.mobile-nav .mobile-main-menu .menu > li a {
+  color: inherit;
+}
+.mobile-nav .mobile-main-menu .menu > li.expanded ul.menu {
+  padding-left: 15px;
+}
+.mobile-nav .mobile-main-menu .menu > li.expanded ul.menu a {
+  font-size: 16px;
 }
