@@ -5,10 +5,16 @@
 
 .header {
 	@media (max-width:@m-device) {
+		.logo a {
+			display: block;
+			text-align: center;
+		}
 		.site-name {
-			font-size: @base-font-size;
+			display:none
 		}
 		.social-links {
+			.reset(padding)!important;
+			height:auto!important;
 			.link-wrapper {
 				width:100%;
 			}
@@ -40,6 +46,7 @@
 		>div {
 			width:33.3333333%;
 			.float-left;
+			text-align: center;
 		}
 	}  	
     .search-form {
@@ -84,11 +91,32 @@
     	font-size: 16px;
     }
 } 
+
+#nav.fixed {
+	.site-name {
+		display:block;
+		.float-left();
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+    position:fixed;
+    top:0;
+    width:100%;
+    background-color: fade(@gray-dark, 80%);
+    z-index:@initial-z-index+20;
+	.nav-bar .main-menu {
+    	.float-right();
+	}
+}
 #nav {
 	@media (max-width:@s-device) {
 		display: none;
 	}
 	margin-bottom: 10px;
+	min-height: 1px;
+	color:@high-contrast-color;
+	background-color: @gray-dark;
+	border-top:2px solid @base-color;
 	ul {
 		.reset(all);
 	}
@@ -99,21 +127,8 @@
 		text-decoration: none;
 		color:@high-contrast-color;
 	}
-	min-height: 1px;
-	color:@high-contrast-color;
-	background-color: @gray-dark;
-	border-top:2px solid @base-color;
 	.site-name {
-		padding:0;
-		font-size: @main-menu-font;
-		line-height: :26px;
-		.site-name-container {
-			background-color:darken(@base-color, 10%);
-			width:60%;
-			font-weight:bold;
-			text-align: center;
-			text-transform: uppercase;
-		}
+		display:none;
 	}
 	.nav-bar {
 		font-size:@main-menu-font;

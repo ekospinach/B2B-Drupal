@@ -3,6 +3,7 @@
 		attach:function(context,settings){
 			var menu=$('.nav-bar li.expanded');
 			var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+			var nav=$('#nav');
 			if (!supportsTouch) {
 				menu.mouseover(function(){
 					$(this).addClass('over');
@@ -20,6 +21,15 @@
 					menu.removeClass('over');
 				});
 			}
+			$(window).scroll(function(){
+				var height=window.screen.availHeight;
+				var scroll=document.body.scrollTop;
+				if (scroll>100) {
+					nav.addClass('fixed');
+				} else {
+					nav.removeClass('fixed');
+				}
+			});
 		}
 	}
 	Drupal.behaviors.swipeSlide={

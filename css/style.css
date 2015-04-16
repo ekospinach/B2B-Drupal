@@ -118,8 +118,16 @@ h6 {
   padding: 10px 15px;
 }
 @media (max-width: 992px) {
+  .header .logo a {
+    display: block;
+    text-align: center;
+  }
   .header .site-name {
-    font-size: 14px;
+    display: none;
+  }
+  .header .social-links {
+    padding: 0 !important;
+    height: auto!important;
   }
   .header .social-links .link-wrapper {
     width: 100%;
@@ -151,6 +159,7 @@ h6 {
 .header .social-links .link-wrapper > div {
   width: 33.3333333%;
   float: left;
+  text-align: center;
 }
 .header .search-form {
   margin-bottom: 0;
@@ -195,6 +204,22 @@ h6 {
   padding: 2px 6px;
   font-size: 16px;
 }
+#nav.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.8);
+  z-index: 120;
+}
+#nav.fixed .site-name {
+  display: block;
+  float: left;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#nav.fixed .nav-bar .main-menu {
+  float: right;
+}
 #nav {
   margin-bottom: 10px;
   min-height: 1px;
@@ -222,16 +247,7 @@ h6 {
   color: #eeeeee;
 }
 #nav .site-name {
-  padding: 0;
-  font-size: 20px;
-  line-height: :26px;
-}
-#nav .site-name .site-name-container {
-  background-color: #6a0304;
-  width: 60%;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
+  display: none;
 }
 #nav .nav-bar {
   font-size: 20px;

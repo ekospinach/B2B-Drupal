@@ -133,6 +133,11 @@
   <?php //endif;?>
     <section id="nav" class="main-menu clearfix">
       <nav class="nav-bar container clearfix">
+        <div class="site-name">
+          <?php if ($site_name): ?>
+            <?php print $site_name; ?>
+          <?php endif; ?>
+        </div>
         <div class="main-menu">
           <?php if ($main_menu_tree): ?>
             <?php print drupal_render($main_menu_tree); ?>
