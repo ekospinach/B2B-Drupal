@@ -43,4 +43,34 @@
 			}
 		}
 	}
+	Drupal.behaviors.mobileNav={
+		attach:function(context,settings) {
+			var menu=$('.mobile-main-menu>.menu');
+			var btn=$('.mobile-main-menu .navbar-toggle');
+			var nav=$('.navbar-header');
+			var expand=$('.mobile-main-menu > .menu > .menu li.expanded > a');
+			btn.click(function(){
+				$(this).toggleClass('collpased');
+			});
+			nav.click(function(){
+				if (btn.hasClass('collpased')) {
+					menu.slideDown();
+				} else {
+					menu.slideUp();
+				}
+			});
+			expand.click(function(event){
+				var that=$(this);
+				var menu=that.next();
+				that.toggleClass('show-menu');
+				if (that.hasClass('show-menu')) {
+					menu.slideDown();
+					event.preventDefault();
+				} else {
+					menu.slideUp();
+					event.preventDefault();
+				}
+			});
+		}
+	};
 })(jQuery)

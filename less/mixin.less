@@ -13,9 +13,18 @@
 .inline-block {
 	display:inline-block;
 }
-.reset {
+.reset (@model) when (@model=margin) {
 	margin: 0;
-	padding:0;
+}
+.reset (@model) when (@model=padding) {
+	padding: 0;
+}
+.reset (@model) when (@model=list) {
+	list-style: none;
+}
+.reset (@model) when (@model=all) {
+	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 .max-image {
@@ -38,4 +47,23 @@
 .square(@value) {
 	width:@value;
 	height:@value;
+}
+.transform (@syntax) {
+	-webkit-transform:@syntax;
+	-o-transform:@syntax;
+	-moz-transform:@syntax;
+	-ms-transform:@syntax;
+	transform:@syntax;
+}
+.transition (@syntax) {
+	-webkit-transition:@syntax;
+	-o-transition:@syntax;
+	-moz-transition:@syntax;
+	-ms-transition:@syntax;
+	transition:@syntax;
+}
+.fontawesome {
+	display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
 }

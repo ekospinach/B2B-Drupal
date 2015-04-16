@@ -144,8 +144,8 @@
       <nav class="mobile-nav clearfix">
         <div class="mobile-main-menu">
           <div class="navbar-header">
-              <a class="navbar-brand" href="#" data-toggle="collapse" data-target=".navbar-main-collapse"><?php print t('Navigation');?></a>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-header">
+              <a class="navbar-brand" href="#" data-toggle="collapse"><?php print t('Navigation');?></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse">
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>

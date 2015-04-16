@@ -56,9 +56,7 @@
     	position: relative;
     	&:after {
     	  content: "\f002";
-		  display: inline-block;
-		  font: normal normal normal 14px/1 FontAwesome;
-		  font-size: inherit;
+		 .fontawesome;
 		  position:absolute;
 		  right:5px;
 		  top:5px;	
@@ -87,12 +85,15 @@
     }
 } 
 #nav {
+	@media (max-width:@s-device) {
+		display: none;
+	}
 	margin-bottom: 10px;
 	ul {
-		.reset;
+		.reset(all);
 	}
 	li {
-		.reset;
+		.reset(all);
 	}
 	a {
 		text-decoration: none;
@@ -101,6 +102,7 @@
 	min-height: 1px;
 	color:@high-contrast-color;
 	background-color: @gray-dark;
+	border-top:2px solid @base-color;
 	.site-name {
 		padding:0;
 		font-size: @main-menu-font;
@@ -126,9 +128,6 @@
 				&:hover {
 					background-color:@gray;
 				}
-			}
-			>li.first {
-				margin-left:-15px;
 			}
 			li.expanded {
 				position: relative;;
@@ -168,7 +167,7 @@
 	background: transparent;
 	margin-bottom: 10px;
 	h2 {
-		.reset;
+		.reset(all);
 		padding:3px;
 		background-color:@gray-lighter;
 		.upper-border-radius(10px);
@@ -226,30 +225,43 @@ footer.footer {
 	}
 }
 
-@media (min-width:@s-device) {
-	.mobile-nav {
+
+.mobile-nav {
+	@media (min-width:@s-device) {
 		display: none;
 	}
 }
+
 .mobile-nav .mobile-main-menu {
 	color:@high-contrast-color;
+	margin-bottom: 10px;
 	.navbar-header {
 		.navbar-brand {
 			color:inherit;
 		}
 		background-color: @nav-background;
+		.navbar-toggle {
+			.transition(all 0.5s ease);
+			.icon-bar+.icon-bar {
+				margin-top: 6px;
+			}
+		}
+		.navbar-toggle.collpased {
+			.transform(rotate(90deg));
+		}
 		.navbar-toggle .icon-bar {
 			background-color: @high-contrast-color;
 		}
 	}
 	.menu {
 		background-color: lighten(#333333, 10%);
-		.reset; 
+		.reset(margin);
+		.reset(padding);
 		>li {
 			a {
 				color:inherit;
 			}
-			.reset;
+			.reset(all);
 			font-size: @base-font-size+4;
 		}
 		>li.expanded ul.menu {
@@ -257,6 +269,23 @@ footer.footer {
 			a {
 				font-size: @base-font-size+2;
 			}
+		}
+	}
+	>.menu {
+		display:none;
+		padding:10px 15px;
+		>.menu li.expanded{
+			>a {
+			display: block;
+				&::after {
+					content:"\f0d7";
+    				margin-left:5px;
+    				.fontawesome;
+				}
+			}
+			>.menu {
+				display:none;
+			}	
 		}
 	}
 }
