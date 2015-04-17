@@ -180,17 +180,15 @@
 .left-sidebar .block {
 	padding:10px;
 	background: transparent;
-	margin-bottom: 10px;
-	h2 {
+	h3 {
 		.reset(all);
 		padding:3px;
-		background-color:@gray-lighter;
-		.upper-border-radius(10px);
+		margin-bottom: 0;
+		line-height: 1.5;
+		border-bottom:2px solid @gray-dark;
 	}
 	.content {
 		padding:5px;
-		background-color:#e7e7e7;
-		.bottom-border-radius(10px);
 	}
 }
 
@@ -199,17 +197,28 @@
 }
 
 footer.footer {
+	ul.menu,li.leaf,li.expanded {
+		.reset(all);
+	}
+	li.expanded .menu {
+		padding-left:10px;
+	}
 	background-color: @gray-dark;
 	.foot.container {
 		background-color: transparent;
-		color:@high-contrast-color;
+		color:#d0d0d0;
 	}
 	a {
 		color:inherit;
 	}
 }
+footer.message {
+	background-color: lighten(@gray-dark, 20%);
+	border-top: 2px solid @base-color;
+}
 
 .slideshow {
+	margin-bottom: 10px;
 	.slide-controller {
 		position: absolute;
 		right:15px;
@@ -237,6 +246,47 @@ footer.footer {
 	  	float:left;
 	  	width:100%;
 	  	position: relative;
+	}
+}
+
+.tri {
+	overflow:hidden;
+	>div {
+		height:115px;
+		padding-left:100px;
+		position: relative;
+		span {
+			display:block;
+			width:100px;
+			height:115px;
+			.absolute(absolute,0,0);
+			background: url("../images/guaranttee.png") 0 0 scroll no-repeat;
+		}
+		p {
+			.absolute(absolute,100px,50%);
+			.transform(translateY(-50%))
+		}
+	}
+	>div.speed {
+		.transform(translateX(-100%));
+		.transition(all 0.5s ease-in-out);
+	}
+	>div.quality {
+		.transform(translateX(-200%));
+		.transition(all 0.5s ease-in-out);
+	}
+	>div.service {
+		.transform(translateX(-300%));
+		.transition(all 0.5s ease-in-out);
+	}
+	>div.speed.inview,>div.quality.inview,>div.service.inview {
+		.transform(translateX(0));
+	}
+	>div.quality span {
+		background-position: -100px 0;
+	}
+	>div.service span {
+		background-position: -200px 0;
 	}
 }
 

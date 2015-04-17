@@ -83,4 +83,28 @@
 			});
 		}
 	};
+	Drupal.behaviors.tri={
+		attach:function(){
+			var tri=$('.tri');
+			var div=tri.find('>div');
+			function inViewport (el) {
+    			var rect = el[0].getBoundingClientRect();
+    		return (
+	        		rect.top >= 0 &&
+	        		rect.left >= 0 &&
+	        		rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+	        		rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+    			);
+			}
+			$(window).scroll(function(){
+				if (inViewport(tri)){
+					for (var i=0;i<3;i++) {
+						window.setTimeout((function(i){
+							div.eq(i).addClass('inview');
+						})(i),i*500)
+					}
+				}
+			});
+		}
+	};
 })(jQuery)

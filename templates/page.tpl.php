@@ -191,6 +191,20 @@
               <span>3</span>
         </div>
         </div>
+        <div class="tri clearfix">
+          <div class="col-sm-4 speed guranttee">
+            <span></span>
+            <p>All orders are processed and shipped in a timely fashion</p>
+          </div>
+          <div class="col-sm-4 quality guranttee">
+            <span></span>
+            <p>High quality manufacturing and full inspection during production</p>
+          </div>
+          <div class="col-sm-4 service guranttee">
+            <span></span>
+            <p>Professional sales and service team ready for your every question and inquiry</p>
+          </div>
+        </div>
       <?php endif; ?>
       <?php if ($page['sidebar_first']||$page['sidebar_second']) {
           $page_column_number=3;
@@ -244,4 +258,14 @@
           <?php endif ;?>
         </div>
       </footer>
+      <footer class="foot message clearfix">
+        <div class="container">
+          <?php if($page['footer']):?>
+            <?php print render($page['footer']); ?>
+          <?php else: ?>
+            <div class="col-sm-6 float-left drupal">Powered By <a href="http://www.drupal.org">Druapl</a></div>
+            <div style="text-align:right" class="col-sm-6 float-right themer">Themed By <a href="http://www.frankdai.com">Frank Dai</a></div>
+          <?php endif; ?>
+        </div>
+      </footer>     
 </div>

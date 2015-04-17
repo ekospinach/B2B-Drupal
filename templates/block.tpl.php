@@ -40,11 +40,11 @@
  * @see template_process()
  */
 ?>
-<div id="<?php print 'block-'.$id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div id="<?php print 'block-'.$id; ?>" class="<?php print $classes.' '.$block_zebra; ?>"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
   <?php if (!empty($block->subject)): ?>
-    <h2 class="block-title" <?php print $title_attributes; ?> ><?php print $block->subject ?></h2>
+    <h3 class="block-title" <?php print $title_attributes; ?> ><?php print $block->subject ?></h3>
   <?php endif;?>
   <?php print render($title_suffix); ?>
 

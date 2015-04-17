@@ -46,7 +46,9 @@ h6 {
   text-transform: capitalize;
 }
 @media (max-width: 768px) {
-  input[type="text"] {
+  input[type="text"],
+  input[type="password"],
+  input[type="textarea"] {
     width: 100%;
   }
 }
@@ -297,22 +299,18 @@ h6 {
 .left-sidebar .block {
   padding: 10px;
   background: transparent;
-  margin-bottom: 10px;
 }
-.left-sidebar .block h2 {
+.left-sidebar .block h3 {
   margin: 0;
   padding: 0;
   list-style: none;
   padding: 3px;
-  background-color: #eeeeee;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  margin-bottom: 0;
+  line-height: 1.5;
+  border-bottom: 2px solid #333333;
 }
 .left-sidebar .block .content {
   padding: 5px;
-  background-color: #e7e7e7;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 .content.content-wrapper {
   padding-top: 10px;
@@ -320,12 +318,29 @@ h6 {
 footer.footer {
   background-color: #333333;
 }
+footer.footer ul.menu,
+footer.footer li.leaf,
+footer.footer li.expanded {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+footer.footer li.expanded .menu {
+  padding-left: 10px;
+}
 footer.footer .foot.container {
   background-color: transparent;
-  color: #eeeeee;
+  color: #d0d0d0;
 }
 footer.footer a {
   color: inherit;
+}
+footer.message {
+  background-color: #666666;
+  border-top: 2px solid #9b0506;
+}
+.slideshow {
+  margin-bottom: 10px;
 }
 .slideshow .slide-controller {
   position: absolute;
@@ -355,6 +370,84 @@ footer.footer a {
   float: left;
   width: 100%;
   position: relative;
+}
+.tri {
+  overflow: hidden;
+}
+.tri > div {
+  height: 115px;
+  padding-left: 100px;
+  position: relative;
+}
+.tri > div span {
+  display: block;
+  width: 100px;
+  height: 115px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../images/guaranttee.png") 0 0 scroll no-repeat;
+}
+.tri > div p {
+  position: absolute;
+  left: 100px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.tri > div.speed {
+  -webkit-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.tri > div.quality {
+  -webkit-transform: translateX(-200%);
+  -o-transform: translateX(-200%);
+  -moz-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  transform: translateX(-200%);
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.tri > div.service {
+  -webkit-transform: translateX(-300%);
+  -o-transform: translateX(-300%);
+  -moz-transform: translateX(-300%);
+  -ms-transform: translateX(-300%);
+  transform: translateX(-300%);
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.tri > div.speed.inview,
+.tri > div.quality.inview,
+.tri > div.service.inview {
+  -webkit-transform: translateX(0);
+  -o-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+.tri > div.quality span {
+  background-position: -100px 0;
+}
+.tri > div.service span {
+  background-position: -200px 0;
 }
 @media (min-width: 768px) {
   .mobile-nav {
