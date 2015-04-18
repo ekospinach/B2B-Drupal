@@ -96,15 +96,17 @@
 	        		rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
     			);
 			}
-			$(window).scroll(function(){
-				if (inViewport(tri)){
-					for (var i=0;i<3;i++) {
-						window.setTimeout((function(i){
-							div.eq(i).addClass('inview');
-						})(i),i*500)
+			if ($('body').hasClass('front')){
+				$(window).scroll(function(){
+					if (inViewport(tri)){
+						for (var i=0;i<3;i++) {
+							window.setTimeout((function(i){
+								div.eq(i).addClass('inview');
+							})(i),i*500)
+						}
 					}
-				}
-			});
+				});
+			}
 		}
 	};
 })(jQuery)
