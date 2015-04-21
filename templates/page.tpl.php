@@ -263,7 +263,7 @@
           <?php if($page['footer']):?>
             <?php print render($page['footer']); ?>
           <?php else: ?>
-            <div class="col-sm-6 float-left drupal">Powered By <a href="http://www.drupal.org">Druapl</a></div>
+            <div class="col-sm-6 float-left drupal">Powered By <a href="http://www.drupal.org">Drupal</a></div>
             <div style="text-align:right" class="col-sm-6 float-right themer">Themed By <a href="http://www.frankdai.com">Frank Dai</a></div>
           <?php endif; ?>
         </div>

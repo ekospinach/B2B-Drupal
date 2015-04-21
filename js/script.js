@@ -96,16 +96,23 @@
 	        		rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
     			);
 			}
-			if ($('body').hasClass('front')){
-				$(window).scroll(function(){
-					if (inViewport(tri)){
-						for (var i=0;i<3;i++) {
-							window.setTimeout((function(i){
-								div.eq(i).addClass('inview');
-							})(i),i*500)
-						}
+			function doTimeout(i,callback,time){
+				window.setTimeout(function(){
+					callback.call(this,i);
+				},i*time)
+			}
+			function animation() {
+				if (inViewport(tri)){
+					for (var i=0;i<3;i++) {
+						doTimeout(i,function(i){
+							div.eq(2-i).addClass('inview');
+						},500);
 					}
-				});
+					$(window).unbind('scroll',animation);
+				}
+			}
+			if ($('body').hasClass('front')){
+				$(window).bind('scroll',animation)
 			}
 		}
 	};

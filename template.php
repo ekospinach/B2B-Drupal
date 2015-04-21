@@ -37,5 +37,12 @@ function b2bdrupal_preprocess_page(&$variables){
   		);
 }
 
+function b2bdrupal_form_alter (&$form,&$form_state,$form_id) {
+  if ($form_id=='search_block_form') {
+    $form['#attributes']['class'][]='form-control';
+  }
+}
+
+
 
 ?>
