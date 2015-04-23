@@ -1,4 +1,34 @@
 ;(function($){
+	$.fn.visible=function(callback,fireOnce) {
+		console.log(this);
+		return this.each(function(){
+		var that=this;
+		var inViewport=function (el) {
+    		var rect = el.getBoundingClientRect();
+    		return (
+	        	rect.top >= 0 &&
+	        	rect.left >= 0 &&
+	        	rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+	        	rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+    		);
+		}
+		var $window=$(window);
+		var fire=function(){
+			if (inViewport(that)) {
+				callback.call(that);
+				if (!fireOnce) {
+					$window.unbind('scroll',fire);
+				}
+			}
+		}
+		if (typeof callback==='function') {
+			fire();
+			$window.bind('scroll',fire);
+		} 
+		});
+	}
+})(jQuery)
+;(function($){
 	Drupal.behaviors.mainMenu={
 		attach:function(context,settings){
 			var menu=$('.nav-bar li.expanded');
@@ -87,33 +117,14 @@
 		attach:function(){
 			var tri=$('.tri');
 			var div=tri.find('>div');
-			function inViewport (el) {
-    			var rect = el[0].getBoundingClientRect();
-    		return (
-	        		rect.top >= 0 &&
-	        		rect.left >= 0 &&
-	        		rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-	        		rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
-    			);
-			}
-			function doTimeout(i,callback,time){
-				window.setTimeout(function(){
-					callback.call(this,i);
-				},i*time)
-			}
-			function animation() {
-				if (inViewport(tri)){
-					for (var i=0;i<3;i++) {
-						doTimeout(i,function(i){
-							div.eq(2-i).addClass('inview');
-						},500);
-					}
-					$(window).unbind('scroll',animation);
-				}
-			}
-			if ($('body').hasClass('front')){
-				$(window).bind('scroll',animation)
-			}
+			tri.visible(function(){
+				div.each(function(index){
+					var that=$(this);
+					window.setTimeout(function(){
+						div.eq(2-index).addClass('inview');
+					},index*500)
+				})
+			});
 		}
 	};
 })(jQuery)
